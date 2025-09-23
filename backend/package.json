@@ -31,6 +31,7 @@
     "class-validator": "^0.14.2",
     "dotenv": "^17.2.2",
     "helmet": "^8.1.0",
+    "langchain": "^0.3.34",
     "reflect-metadata": "^0.2.2",
     "rxjs": "^7.8.1",
     "zod": "^3.25.76"

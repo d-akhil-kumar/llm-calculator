@@ -6,6 +6,11 @@ import { subtractTool } from './subtract.tool'
 export class ToolsFactory {
   private static calculatorTools = [addTool, subtractTool]
 
+  private static toolsByName = {
+    [addTool.name]: addTool,
+    [subtractTool.name]: subtractTool,
+  }
+
   getAllTools() {
     return ToolsFactory.calculatorTools
   }
@@ -22,5 +27,13 @@ export class ToolsFactory {
 
   getToolNames() {
     return ToolsFactory.calculatorTools.map((tool) => tool.name)
+  }
+
+  getToolsByNameMap() {
+    return ToolsFactory.toolsByName
+  }
+
+  getToolsFromMap() {
+    return Object.values(ToolsFactory.toolsByName)
   }
 }
